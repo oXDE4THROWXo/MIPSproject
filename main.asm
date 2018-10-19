@@ -7,4 +7,4 @@
     sub $a0, 64       # 0
     syscall
     addi $a0, 2       # 2
-    syscall        
+    syscall

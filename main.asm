@@ -13,4 +13,9 @@
     addi $a0, 2       # 2
     syscall
     sub $a0,  2       # 0
+    syscall
+    addi $a0, 2       # 2
+    syscall
+    addi $a0, 6       # 9
+    syscall
     

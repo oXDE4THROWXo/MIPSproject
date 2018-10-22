@@ -18,4 +18,6 @@
     syscall
     addi $a0, 6       # 9
     syscall
-    
+    sub $a0,  8       # 1
+    syscall
+   

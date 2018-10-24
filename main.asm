@@ -43,6 +43,12 @@
     syscall
     addi $a0, 37      # h (104)
     syscall
+    addi $a0, 10      # r (114)
+    syscall
+    sub $a0,  9       # i (104)
+    syscall
+    
+    
     
     
     

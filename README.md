@@ -1,2 +1,1 @@
-# MIPSproject
-MIPS Project 1
+https://github.com/oXDE4THROWXo/MIPSproject

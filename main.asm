@@ -39,5 +39,20 @@
     syscall
     sub $a0,  12      # [space] (32)
     syscall
+    addi $a0, 35      # C (67)
+    syscall
+    addi $a0, 37      # h (104)
+    syscall
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
    

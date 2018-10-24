@@ -51,6 +51,10 @@
     syscall
     addi $a0, 10      # t (116)
     syscall
+    sub $a0,  5       # o (111)
+    syscall
+    addi $a0, 2       # p (112)
+    syscall
     
     
     

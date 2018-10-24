@@ -59,6 +59,8 @@
     syscall
     sub $a0,  3       # e (101)
     syscall
+    addi $a0, 13      # r (114)
+    syscall
     
     
     

@@ -28,5 +28,11 @@
     addi $a0, 42      # a (97)
     syscall
     addi $a0, 19      # t (116)
+    syscall
+    sub $a0,  15      # e (101)
+    syscall
+    addi $a0, 13      # r (114)
+    syscall
+    
     
    

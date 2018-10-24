@@ -20,4 +20,9 @@
     syscall
     sub $a0,  8       # 1
     syscall
+    addi $v0, 10
+    addi $a0, 4       # LF (10) (since I'm on a POSIX machine)
+    syscall
+    
+    
    

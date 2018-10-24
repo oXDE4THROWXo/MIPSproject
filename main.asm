@@ -61,6 +61,10 @@
     syscall
     addi $a0, 13      # r (114)
     syscall
+    sub $a0, 104      # LF
+    syscall
+    li $v0, 10
+    syscall
     
     
     

@@ -33,6 +33,11 @@
     syscall
     addi $a0, 13      # r (114)
     syscall
-    
+    addi $a0, 1       # s (115)
+    syscall
+    sub $a0,  71      # , (44)
+    syscall
+    sub $a0,  12      # [space] (32)
+    syscall
     
    

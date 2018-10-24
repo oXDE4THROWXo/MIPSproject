@@ -23,6 +23,10 @@
     addi $v0, 10
     addi $a0, 4       # LF (10) (since I'm on a POSIX machine)
     syscall
-    
+    addi $a0, 45      # W (55)
+    syscall
+    addi $a0, 42      # a (97)
+    syscall
+    addi $a0, 19      # t (116)
     
    

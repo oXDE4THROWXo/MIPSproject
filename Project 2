@@ -8,3 +8,8 @@
     .asciiz "Invalid base-36 number."
     input_storage:
     .space 2000
+    filtered_input:                             
+    .space 4
+
+.text
+main:

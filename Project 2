@@ -13,3 +13,7 @@
 
 .text
 main:
+
+    la $a0, input_storage                      
+    li $v0, 8                                   
+    syscall

@@ -52,7 +52,10 @@ main:
     la $a0, filtered_input                      
     addi $a0, $a0, 4
     
-    sb $t0, 3($a1)
-    addi $a0, $a0, 3
+    loop:
+    li $t5, 4
+    beq $t5, $s4, loop_exit
+    addi $s4, $s4, 1                            
+    addi $a0, $a0, -1 
     
     

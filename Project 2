@@ -60,11 +60,11 @@ main:
     addi $s4, $s4, 1                            
     addi $a0, $a0, -1 
     
-    lb $t2, 0($a0)                          # get ASCII value of current char
-    beqz $t2, loop                          # if the value is NUL, branch to loop start
+    lb $t2, 0($a0)                                # get ASCII value of current char
+    beqz $t2, loop                                # if the value is NUL, branch to loop start
     
-    li $a1, 10                              # load new line char in $a1
-    beq $a1, $t2, loop                      # go to loop start if it is new line char.
+    li $a1, 10                                    # load new line char in $a1
+    beq $a1, $t2, loop                            # go to loop start if it is new line char.
     
     li $s7, 32                             
     beq $t2, $s7, handle_space
@@ -75,9 +75,9 @@ main:
     slt $t1, $t0, $t2
     slti $t4, $t2, 58
     and $s5, $t1, $t4
-    addi $s3, $t2, -48                          
+    addi $s3, $t2, -48                             # $s3 has required value used for calulation later                        
     li $t7, 1
-    beq $t7, $s5, calculation
+    beq $t7, $s5, calculation                      # if $s5 already has 1, calculate the char's value from ASCII
     
     li $t0, 64
     slt $t1, $t0, $t2

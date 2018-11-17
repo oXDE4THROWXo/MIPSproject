@@ -122,7 +122,16 @@ main:
     jal exit
     
     print_invalid_value:
-    la $a0, invalid_number                      # load address of the string to print
-    li $v0, 4                                   # load code to print string
+    la $a0, invalid_number                      
+    li $v0, 4                                   
     syscall
     jal exit
+    
+    print_more_than_four:
+    la $a0, input_too_long                      
+    li $v0, 4                                   
+    syscall
+
+    exit:
+    li $v0, 10                                 
+    syscall

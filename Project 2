@@ -37,7 +37,9 @@ main:
     lb $t0, 2($a0)
     sb $t0, 2($a1)
     lb $t0, 3($a0)
-    
+    sb $t0, 3($a1)
+    addi $a0, $a0, 3                            # updated address pointed in the loop to skip checking the 4 bytes already loaded into filtered_input
+
     skip:
     addi $a0, $a0, 1
     jal filter_loop

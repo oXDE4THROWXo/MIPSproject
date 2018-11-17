@@ -66,3 +66,10 @@ main:
     
     li $s7, 32                                 
     beq $t2, $s7, handle_space
+    
+    li $s6, 1
+    
+    li $t0, 47
+    slt $t1, $t0, $t2
+    slti $t4, $t2, 58
+    and $s5, $t1, $t4                           

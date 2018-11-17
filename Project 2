@@ -102,3 +102,9 @@ main:
     li $t6, 36
     mult $s0, $t6
     mflo $s0
+    
+    jal loop
+
+    handle_space:
+    beq $zero, $s6, loop                       
+    jal print_invalid_value

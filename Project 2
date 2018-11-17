@@ -60,13 +60,13 @@ main:
     addi $s4, $s4, 1                            
     addi $a0, $a0, -1 
     
-    lb $t2, 0($a0)                              
-    beqz $t2, loop
+    lb $t2, 0($a0)                          # get ASCII value of current char
+    beqz $t2, loop                          # if the value is NUL, branch to loop start
     
-    li $a1, 10                                
-    beq $a1, $t2, loop
+    li $a1, 10                              # load new line char in $a1
+    beq $a1, $t2, loop                      # go to loop start if it is new line char.
     
-    li $s7, 32                                 
+    li $s7, 32                             
     beq $t2, $s7, handle_space
     
     li $s6, 1

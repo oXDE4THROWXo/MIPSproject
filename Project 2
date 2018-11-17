@@ -110,12 +110,12 @@ main:
     jal loop
 
     handle_space:
-    beq $zero, $s6, loop                       
+    beq $zero, $s6, loop                                # if no alphanumeric char found, branch to loop                       
     jal print_invalid_value
     
     loop_exit:
-    li $v0, 1                                  
-    add $a0, $zero, $s1                        
+    li $v0, 1                                           # load code to print integer                                
+    add $a0, $zero, $s1                                 # load value calculated in the loop
     syscall
     jal exit
     

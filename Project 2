@@ -6,8 +6,8 @@
     .asciiz "Input is empty."
     invalid_number:
     .asciiz "Invalid base-36 number."
-    input_storage:
-    .space 2000
+    input_storage:                      # saves space memory for user input string
+    .space 2000                         # allocate 4 bytes for filtered out string that doesn't have white spaces
     filtered_input:                             
     .space 4
 

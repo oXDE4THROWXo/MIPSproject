@@ -37,6 +37,21 @@ main:
     lb $t0, 2($a0)
     sb $t0, 2($a1)
     lb $t0, 3($a0)
+    
+    skip:
+    addi $a0, $a0, 1
+    jal filter_loop
+    
+    exit_filter_loop:
+    beqz $s2, print_empty
+    
+    li $s0, 1                                   
+    li $s1, 0                                 
+    li $s4, 0                                   
+    li $s6, 0                                   
+    la $a0, filtered_input                      
+    addi $a0, $a0, 4
+    
     sb $t0, 3($a1)
     addi $a0, $a0, 3
     

@@ -100,12 +100,13 @@ main:
     calculation:
     mult $s0, $s3                               
     mflo $t3
-    add $s1, $s1, $t3  
+    add $s1, $s1, $t3                                   # add the above multiplication to the value resulting from calculation 
     
+                                                        # Calculate the value of $s0 for next round of multiplication
     li $t6, 36
     mult $s0, $t6
     mflo $s0
-    
+    # Start the loop again
     jal loop
 
     handle_space:
